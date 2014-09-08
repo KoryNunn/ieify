@@ -28,3 +28,4 @@ var someCode = "var x = {class:'foo'}; x.switch = 'bar';"
 
 ieify(someCode)
 // -> var x = {"class":'foo'}; x["switch"] = 'bar';
+```

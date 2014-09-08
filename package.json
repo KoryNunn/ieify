@@ -2,7 +2,7 @@
   "name": "ieify",
   "version": "1.0.0",
   "main": "index.js",
-  "description":"Takes valid code, and makes it more valid for syntactically challenged environments (Internet explorer)",
+  "description": "Takes valid code, and makes it more valid for syntactically challenged environments (Internet explorer)",
   "directories": {
     "test": "test"
   },
@@ -11,10 +11,18 @@
   },
   "author": "",
   "license": "ISC",
-  "devDendencies": {
-    "grape": "^1.0.2"
-  },
   "dependencies": {
     "recast": "^0.7.1"
-  }
+  },
+  "devDependencies": {
+    "grape": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KoryNunn/ieify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KoryNunn/ieify/issues"
+  },
+  "homepage": "https://github.com/KoryNunn/ieify"
 }
