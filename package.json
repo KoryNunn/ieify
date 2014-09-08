@@ -1,0 +1,20 @@
+{
+  "name": "ieify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description":"Takes valid code, and makes it more valid for syntactically challenged environments (Internet explorer)",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDendencies": {
+    "grape": "^1.0.2"
+  },
+  "dependencies": {
+    "recast": "^0.7.1"
+  }
+}
