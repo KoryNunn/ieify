@@ -1,6 +1,6 @@
 {
   "name": "ieify",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "index.js",
   "description": "Takes valid code, and makes it more valid for syntactically challenged environments (Internet explorer)",
   "directories": {
