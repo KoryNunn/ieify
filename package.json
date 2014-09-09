@@ -7,12 +7,16 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./tests"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Maurice Butler <maurice.butler@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "ieify": "./cli.js"
+  },
   "dependencies": {
-    "recast": "^0.7.1"
+    "recast": "^0.7.1",
+    "through": "^2.3.4"
   },
   "devDependencies": {
     "grape": "^1.0.2"

@@ -1,4 +1,5 @@
-var recast = require("recast"),
+var recast = require('recast'),
+    through = require('through'),
     keywords = [
         // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar
         'break',
@@ -37,8 +38,6 @@ var recast = require("recast"),
         'yield'
     ];
 
-
-
 function scanForKeywords(node){
     for(var key in node){
         var obj = node[key];
@@ -50,7 +49,7 @@ function scanForKeywords(node){
 
         if(obj.type === 'Identifier'){
             if(~keywords.indexOf(obj.name)){
-                obj.type = "Literal";
+                obj.type = 'Literal';
                 obj.raw = '"' + obj.name + '"';
                 obj.value = obj.name;
                 delete obj.name;
@@ -71,4 +70,19 @@ function ieify(code){
     return recast.print(ast).code;
 }
 
-module.exports = ieify;
+module.exports = function(code){
+    if(arguments.length === 0){
+        code = '';
+
+        return through(function(chunk) {
+               code += chunk.toString();
+            },
+            function() {
+               this.queue(ieify(code));
+               this.queue(null);
+            }
+        );
+    }
+
+    return ieify(code);
+};
