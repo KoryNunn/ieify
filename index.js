@@ -2,6 +2,7 @@ var recast = require('recast'),
     through = require('through'),
     keywords = [
         // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar
+        // plus null and undefined.
         'break',
         'case',
         'class',
@@ -32,6 +33,7 @@ var recast = require('recast'),
         'throw',
         'try',
         'typeof',
+        'undefined',
         'var',
         'void',
         'while',
